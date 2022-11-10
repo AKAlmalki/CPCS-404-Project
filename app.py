@@ -899,7 +899,7 @@ def edit_show_submission(show_id):
   else:
     return render_template('pages/home.html')
 
-@app.route('/shows/<int:show_id>', methods=['DELETE'])
+@app.route('/shows/<int:show_id>/delete', methods=['GET'])
 def delete_show(show_id):
   
   error = False
