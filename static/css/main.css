@@ -322,12 +322,31 @@ h2.monospace {
   font-size: 16px;
 }
 
+/* Page buttons */
+
+.page-button-container {
+  margin: 40px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-button {
+  padding: 15px 10px;
+  font-size: 20px;
+}
+
+/* Responsive */
+
 @media (min-width: 700px) {
   .show-item {
     min-width: 200px;
     max-width: 250px;
     min-height: 400px;
     max-height: 420px;
+  }
+  .show-img {
+    height:150px;
   }
 }
 
@@ -342,6 +361,9 @@ h2.monospace {
     min-height: 450px;
     max-height: 500px;
   }
+  .show-img {
+    height:200px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -350,5 +372,8 @@ h2.monospace {
     max-width: 450px;
     min-height: 500px;
     max-height: 600px;
+  }
+  .show-img {
+    height:280px;
   }
 }
