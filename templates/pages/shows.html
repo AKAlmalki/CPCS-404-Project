@@ -23,24 +23,24 @@
         for (let i = 0; i < deleteBtnShow.length; i++) {
             let btn = deleteBtnShow[i];
             btn.onclick = function(){
-            fetch('/shows/{{ show.id }}', {
-                method: 'DELETE'
+            fetch('/shows/{{ show.id }}/delete', {
+                method: 'GET'
             })
             .then(
                 response => window.location.href = '/shows'
             )}
         }
-
-        class ShowView {
-            constructor() {
-                this.state = {
-                    shows: [],
-                    page: 1,
-                }
-            }
-            
-        }
     </script>
     {% endfor %}
+
+</div>
+<div class="page-button-container">
+    <a class="page-button" href="/shows?page=1">1</a>
+    <a class="page-button" href="/shows?page=2">2</a>
+    <a class="page-button" href="/shows?page=3">3</a>
+    <a class="page-button" href="/shows?page=4">4</a>
+    <a class="page-button" href="/shows?page=5">5</a>
+    <a class="page-button" href="/shows?page=6">6</a>
+    <a class="page-button" href="/shows?page=7">7</a>
 </div>
 {% endblock %}
